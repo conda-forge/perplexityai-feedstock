@@ -1,5 +1,5 @@
 {% set name = "perplexityai" %}
-{% set version = "0.29.1" %}
+{% set version = "0.30.1" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/perplexityai-{{ version }}.tar.gz
-  sha256: 7c37a267d8e5dec1a640f201dd569edf9247a185e29465c2e3dab13108706264
+  sha256: 4a33ccd528d1ff95e172d3232afa5eb1369ee7208abbd6e320d77942586ad8a8
 
 build:
   noarch: python
