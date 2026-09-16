@@ -11,6 +11,9 @@ package:
 source:
   url: https://github.com/perplexityai/perplexity-py/archive/refs/tags/v${{ version  }}.tar.gz
   sha256: fa6f1a8096525a642754ce1f9123d978954e085e3fc9f80bd35e2a684a8fd58d
+  # https://github.com/perplexityai/perplexity-py/pull/120
+  patches:
+    - license.patch
 
 build:
   number: 0
@@ -50,4 +53,3 @@ about:
 extra:
   recipe-maintainers:
     - Aleksei-Poliakov
-
