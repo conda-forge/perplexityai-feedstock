@@ -2,16 +2,15 @@ schema_version: 1
 
 context:
   name: perplexityai
-  version: "0.42.0"
-  python_min: "3.9"
+  version: "0.43.5"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/perplexityai-${{ version }}.tar.gz
-  sha256: 2a1c237500a784e9c80f8cd3f3c4d0ee2a73976ae75dc8f777f7063fd9c34ac3
+  url: https://github.com/perplexityai/perplexity-py/archive/refs/tags/v${{ version  }}.tar.gz
+  sha256: fa6f1a8096525a642754ce1f9123d978954e085e3fc9f80bd35e2a684a8fd58d
 
 build:
   number: 0
