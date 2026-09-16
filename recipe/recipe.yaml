@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  name: perplexityai
+  version: "0.42.0"
+  python_min: "3.9"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/perplexityai-${{ version }}.tar.gz
+  sha256: 2a1c237500a784e9c80f8cd3f3c4d0ee2a73976ae75dc8f777f7063fd9c34ac3
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling ==1.26.3
+    - hatch-fancy-pypi-readme
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - httpx >=0.23.0,<1
+    - pydantic >=1.9.0,<3
+    - typing_extensions >=4.14,<5
+    - anyio >=3.5.0,<5
+    - distro >=1.7.0,<2
+    - sniffio
+
+tests:
+  - python:
+      imports:
+        - perplexity
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - '*'
+
+about:
+  summary: The official Python library for the perplexity API
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/perplexityai/perplexity-py
+
+extra:
+  recipe-maintainers:
+    - Aleksei-Poliakov
+
