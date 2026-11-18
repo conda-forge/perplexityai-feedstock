@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.47.0"
+  version: "0.48.0"
 
 package:
   name: perplexityai
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/perplexityai/perplexity-py/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 3211fcf7473d09f2c37f13384a37692f89df191a54b82e70bbb3d6ee3dd2b9d6
+  sha256: 10206b9d214169b68bd33603a5e0ad06e5ca3b1bac4df13b91b5f69c3212e8d6
   # https://github.com/perplexityai/perplexity-py/pull/120
   patches:
     - license.patch
